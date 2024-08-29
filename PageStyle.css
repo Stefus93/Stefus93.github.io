@@ -1,0 +1,192 @@
+body {
+    font-family: monospace;
+    background-color: #2e2e2e;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    height: 100vh; /* Full viewport height */
+}
+#skills-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1e1e1e;
+    color: #00ff00;
+    padding-top: 10px;
+    height:35px;
+    border-bottom: 1px solid #00ff00;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#skills-container > div {
+    padding: 0 20px;
+    text-align: center;
+}
+#end:hover{color:aquamarine}
+#end:active{color:black}
+
+#end{
+    border:none;
+    background: inherit;
+    color:#00ff00;
+    font-size: 28px;
+    transition: 1s;
+}
+.skill {display: block;width:100%;border-bottom:1px solid #00ff00;padding:2px;}
+.skill span:hover{color:aqua}
+.skill span:active{color:red}
+.skill span{
+    float: right;
+    background: inherit;
+    color:inherit;
+    padding-right: 5px;
+    text-decoration: underline;
+}
+.skill:last-child{
+    border:none;
+}
+#contentmain{
+    background-color: #1e1e1e;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    width:600px;
+    overflow: hidden;
+    float:left;
+}
+#contentmain #topbar{
+    border-bottom: 1px solid #00ff00;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+#content{
+    flex:1;
+    top:35px;
+    position: absolute; /* Position relative to ensure it's on top of other elements */
+    z-index: 1001; /* Higher than the console */
+    /* You can add more styles to position your content as needed */
+}
+#content #sidebar span:hover{background: black;color:white;}
+#content #sidebar span.active{background: black;color:#00ff00;}
+#content #sidebar span{
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    width: calc(100% + 10px);
+    left:-5px;
+    position: relative;
+}
+#content #sidebar{
+    display: block;
+    float:left;
+    background: darkblue;
+    color:#00ff00;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #00ff00;
+    padding-left:5px;
+    padding-right:5px;
+}
+#console-output {
+    width: 100%;
+    height: 130px;
+    background-color: #1e1e1e;
+    color: #00ff00;
+    padding: 10px;
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+    border-top: 1px solid #00ff00;
+    box-sizing: border-box;
+    line-height: 1.2em;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0; /* Stick the console to the bottom */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the console is below the content */
+}
+
+
+
+
+/*
+--------------------
+COMBAT
+--------------------
+*/
+#currentm{
+    padding-left: 5px;
+}
+#currentm button{
+    color:red;
+    background: inherit;
+    border:none;
+    padding:none;
+    margin: none;
+}
+
+#currentm button:hover:disabled{color:black}
+#currentm button:disabled{color:black}
+#currentm button:hover{
+    color:cyan;
+}
+
+/* 
+--------------------
+    Inventory 
+--------------------    
+*/
+#SubContent{
+    display:block;
+    width:100%;
+}
+#precont{
+    display:block;
+    width:100%;
+    text-align: center;
+}
+.ttsel{
+    display:inline-block;
+    text-align: center;
+    transition: 0.3s;
+}
+.ttsel:hover{
+    background: white;
+    color:cyan;
+}
+.ttsel.active{
+    background: black;
+    color:cyan;
+}
+.ItemDisplay{
+    float: left;
+    text-align: center;
+    border:1px solid #00ff00;
+    width:calc(50% - 2px)
+}
+.Equipbut:hover{color:cyan}
+.Equipbut:active{color:#00ff00}
+.Equipbut{
+    float:right;
+    background: inherit;
+    color:cadetblue;
+    border:none;
+}
+.shop-item{
+    border-bottom: #00ff00 1px solid;
+}
+.ShopBut:hover{color:cyan;}
+.ShopBut:active{color:red}
+.ShopBut{
+    background-color:#2e2e2e;
+    position: relative;
+    border:none;
+    display:inline-block;
+    color:inherit;
+}
